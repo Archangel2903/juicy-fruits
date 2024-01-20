@@ -1,46 +1,46 @@
 $fonts-path: '../fonts/';
 
 @font-face {
-  font-family:'Inter';
-  src: url('#{$fonts-path}Inter Black.eot');
-  src: url('#{$fonts-path}Inter Black.eot?#iefix') format('embedded-opentype'),
-  url('#{$fonts-path}Inter Black.woff2') format('woff2'),
-  url('#{$fonts-path}Inter Black.woff') format('woff'),
-  url('#{$fonts-path}Inter Black.ttf') format('truetype'),
-  url('#{$fonts-path}Inter Black.svg#Inter Black') format('svg');
+  font-family:'Montserrat';
+  src: url('#{$fonts-path}Montserrat Black.eot');
+  src: url('#{$fonts-path}Montserrat Black.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Black.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Black.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Black.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Black.svg#Montserrat Black') format('svg');
   font-display: swap;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-E114;
+  unicode-range: U+000D-FB02;
 }
 
 @font-face {
-  font-family:'Inter';
-  src: url('#{$fonts-path}Inter Bold.eot');
-  src: url('#{$fonts-path}Inter Bold.eot?#iefix') format('embedded-opentype'),
-  url('#{$fonts-path}Inter Bold.woff2') format('woff2'),
-  url('#{$fonts-path}Inter Bold.woff') format('woff'),
-  url('#{$fonts-path}Inter Bold.ttf') format('truetype'),
-  url('#{$fonts-path}Inter Bold.svg#Inter Bold') format('svg');
+  font-family:'Montserrat';
+  src: url('#{$fonts-path}Montserrat Bold.eot');
+  src: url('#{$fonts-path}Montserrat Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Bold.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Bold.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Bold.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Bold.svg#Montserrat Bold') format('svg');
   font-display: swap;
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-E114;
+  unicode-range: U+000D-FB02;
 }
 
 @font-face {
-  font-family:'Inter';
-  src: url('#{$fonts-path}Inter Regular.eot');
-  src: url('#{$fonts-path}Inter Regular.eot?#iefix') format('embedded-opentype'),
-  url('#{$fonts-path}Inter Regular.woff2') format('woff2'),
-  url('#{$fonts-path}Inter Regular.woff') format('woff'),
-  url('#{$fonts-path}Inter Regular.ttf') format('truetype'),
-  url('#{$fonts-path}Inter Regular.svg#Inter Regular') format('svg');
+  font-family:'Montserrat';
+  src: url('#{$fonts-path}Montserrat Medium.eot');
+  src: url('#{$fonts-path}Montserrat Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Medium.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Medium.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Medium.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Medium.svg#Montserrat Medium') format('svg');
   font-display: swap;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-E114;
+  unicode-range: U+000D-FB02;
 }

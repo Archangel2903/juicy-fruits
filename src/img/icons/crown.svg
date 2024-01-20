@@ -1,21 +1,5 @@
-<svg width="184" height="167" viewBox="0 0 184 167" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_1219_4128)">
-<path d="M63.8767 130.113L119.967 130.113" stroke="#FFA608" stroke-width="8.00001" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M91.9244 48.9414L103.196 79.3562C105.067 84.4057 111.292 86.2015 115.565 82.9246L138.843 65.0742L126.2 108.822C125.211 112.245 122.078 114.601 118.515 114.601H65.3341C61.7712 114.601 58.6378 112.245 57.6486 108.822L45.0055 65.0742L68.2835 82.9246C72.5568 86.2015 78.7818 84.4057 80.6531 79.3562L91.9244 48.9414Z" fill="#FFA608" fill-opacity="0.32" stroke="#FFA608" stroke-width="8.00001"/>
-<ellipse cx="144.183" cy="57.187" rx="7.47414" ry="7.47412" fill="#FFA608"/>
-<ellipse cx="91.9251" cy="39.9976" rx="7.47414" ry="7.47412" fill="#FFA608"/>
-<ellipse cx="39.8195" cy="57.1873" rx="7.47414" ry="7.47412" fill="#FFA608"/>
-</g>
-<defs>
-<filter id="filter0_d_1219_4128" x="0.345295" y="0.523396" width="183.312" height="165.59" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="16"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.65098 0 0 0 0 0.0313726 0 0 0 0.8 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1219_4128"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1219_4128" result="shape"/>
-</filter>
-</defs>
+<svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29.4442 0.502098L29.4435 0.501404L14.937 15.3694H29.4438V0.502098H29.4442Z" fill="#F5B832"/>
+<path d="M14.936 0.501404L29.4423 15.3694L0.429733 15.3694L14.936 0.501404Z" fill="#F5B832"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.429792 0.502348L0.430713 0.501404L0.431634 0.502348H0.429792ZM0.432783 15.3694V0.503526L14.937 15.3694H0.432783Z" fill="#F5B832"/>
 </svg>
