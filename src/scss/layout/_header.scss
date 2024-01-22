@@ -16,43 +16,37 @@ header.header {
   &__content {
     position: relative;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-content: center;
     align-items: center;
+    gap: 16px;
   }
   &__logo {
-    position: absolute;
-    top: 50%;
-    left: 64px;
-    transform: translateY(-50%);
+
   }
   &__title {
     display: inline-flex;
     flex-flow: column wrap;
     justify-content: center;
     align-content: stretch;
-    align-items: center;
-    margin: 0 auto;
+    margin: 0;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
 
     p {
       margin: 0;
       color: $main-second-color;
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 900;
 
       span {
         color: #fcf072;
         font-weight: 500;
       }
-    }
-    h1 {
-      margin: 0;
-      color: var(--white);
-      font-size: 48px;
-      font-weight: 900;
     }
   }
 }

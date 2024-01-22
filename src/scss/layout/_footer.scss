@@ -23,5 +23,9 @@ footer.footer {
     align-content: center;
     align-items: center;
     gap: 16px;
+
+    img {
+      max-width: 60px;
+    }
   }
 }
