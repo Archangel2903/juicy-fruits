@@ -44,5 +44,3 @@ $(function () {
         });
     }
 });
-
-alert(window.innerWidth);
