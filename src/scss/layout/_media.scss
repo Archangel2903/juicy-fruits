@@ -21,6 +21,16 @@
       }
     }
   }
+
+  form {
+    &.form {
+      .form-input-button {
+        position: absolute;
+        height: 100%;
+        margin: 0;
+      }
+    }
+  }
 }
 @include media-breakpoint-up(md) {
   .header {
@@ -35,12 +45,24 @@
       text-align: center;
     }
   }
+
+  .ui-tabs {
+    .ui-tabs {
+      &-panel {
+        padding: 0 40px;
+      }
+    }
+  }
 }
 @include media-breakpoint-up(lg) {
   .header {
     &__logo {
       left: 64px;
     }
+  }
+
+  .reg-content {
+
   }
 }
 @include media-breakpoint-up(xl) {}

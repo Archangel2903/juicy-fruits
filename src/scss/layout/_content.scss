@@ -255,6 +255,137 @@
   }
 }
 
+.congrats {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 0 0 36px;
+
+  &__title {
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    margin: 0 0 24px;
+    color: #F5B832;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    span {
+      color: #FCF072;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  &__prize {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    &-text {
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      margin: 0;
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1;
+
+      & > span {
+        display: inline-flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: flex-start;
+        margin-left: 8px;
+        font-size: 40px;
+        text-transform: uppercase;
+
+        span {
+          &:nth-child(1) {
+            font-size: 32px;
+          }
+
+          &:nth-child(2) {
+            font-size: 24px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    & > span {
+      margin: 10px 0;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 0.71;
+    }
+  }
+
+  &__button {
+    padding: 22px 42px;
+    margin-top: 40px;
+  }
+}
+
+.reg-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.registration {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  padding: 24px;
+
+  &__title {
+    margin: 0 auto 32px;
+    color: var(--gold);
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: auto 0 0;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+
+    a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+  }
+
+  form fieldset {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    gap: 32px;
+  }
+}
+
 @include media-breakpoint-up(md) {
   .wheel-section {
     padding: 200px 0;
@@ -275,6 +406,20 @@
       flex-direction: row;
       padding-left: 30px;
     }
+  }
+
+  .reg-content {
+    flex-direction: row;
+  }
+
+  .congrats {
+    &__pic {
+      margin: -75px 0 0;
+    }
+  }
+
+  .registration {
+    padding: 48px 48px 48px 24px;
   }
 }
 @include media-breakpoint-up(lg) {

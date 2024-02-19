@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.10409ddb498762f2dbf6.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.c623f203831c7da735ef.min.css" rel="stylesheet"></head>
 <body>
 <!-- BODY -->
 <div class="main-wrapper">
@@ -112,7 +112,7 @@
                             <span>Win<svg><use xlink:href="img/spritemap.svg#sprite-crown"></use></svg></span>Right Now!
                         </p>
 
-                        <button class="wheel-section__button btn-style"><span>spin</span></button>
+                        <button id="button" class="wheel-section__button btn-style"><span>spin</span></button>
 
                         <p class="wheel-section__attempt" data-count="2">Attempts<br>Left</p>
                     </div>
@@ -148,6 +148,133 @@
     </footer>
     <!-- FOOTER END -->
 </div>
+
+<!-- Congratulation -->
+<div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="congratsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="congrats">
+                <picture class="congrats__pic">
+                    <img src="img/default.svg" data-src="img/box.png" alt="" title="">
+                </picture>
+
+                <p class="congrats__title">
+                    Congrats!
+                    <span>You won</span>
+                </p>
+
+                <div class="congrats__prize">
+                    <p class="congrats__prize-text">150 <span><span>free</span><span>spins</span></span></p>
+                </div>
+
+                <button id="congrats_button" class="congrats__button btn-style"><span>Claim</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Registration -->
+<div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="registrationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content reg-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+
+            <div class="congrats">
+                <picture class="congrats__pic">
+                    <img src="img/default.svg" data-src="img/box.png" alt="" title="">
+                </picture>
+
+                <p class="congrats__title">
+                    Congrats!
+                    <span>You won</span>
+                </p>
+
+                <div class="congrats__prize">
+                    <p class="congrats__prize-text">1500 <span>$</span></p>
+                    <span>+</span>
+                    <p class="congrats__prize-text">150 <span><span>free</span><span>spins</span></span></p>
+                </div>
+            </div>
+
+            <div class="registration">
+                <p class="registration__title">Registration & Claim Your Bonus</p>
+
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1">Phone</a></li>
+                        <li><a href="#tabs-2">Email</a></li>
+                    </ul>
+
+                    <div id="tabs-1">
+                        <form action="" method="POST" class="form form-phone">
+                            <label class="form-group">
+                                <input type="tel" id="phone" class="form-control" placeholder=" ">
+                                <input type="button" class="form-input-button" value="send sms">
+                            </label>
+
+                            <label class="form-group">
+                                <input type="number" class="form-control" placeholder=" ">
+                                <span class="form-label">Confirmation code</span>
+                                <input type="button" class="form-input-button" value="confirm">
+                            </label>
+
+                            <button type="submit" class="btn btn-primary">Register & Claim</button>
+                        </form>
+                    </div>
+
+                    <div id="tabs-2">
+                        <form action="" method="POST" class="form form-email">
+                            <div class="row">
+                                <div class="col-lg-6 m-lg-0 mb-4">
+                                    <fieldset>
+                                        <label class="form-group">
+                                            <input type="email" class="form-control" placeholder=" ">
+                                            <span class="form-label">Email</span>
+                                        </label>
+
+                                        <label class="form-group">
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="form-label">First name</span>
+                                        </label>
+
+                                        <label class="form-group">
+                                            <input type="text" class="form-control" placeholder=" ">
+                                            <span class="form-label">Surname</span>
+                                        </label>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <fieldset>
+                                        <label class="form-group">
+                                            <button type="button" class="form-button-pass">
+                                                <svg><use xlink:href="img/spritemap.svg#sprite-pass-visible"></use></svg>
+                                            </button>
+                                            <input type="password" class="form-control" placeholder=" ">
+                                            <span class="form-label">Password</span>
+                                        </label>
+                                        <label class="form-group">
+                                            <input type="password" class="form-control" placeholder=" ">
+                                            <span class="form-label">Re-enter your password</span>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Register & Claim</button>
+
+                            <!--<button type="submit" class="form-submit btn-style"><span>Register & Claim</span></button>-->
+                        </form>
+                    </div>
+                </div>
+
+                <p class="registration__text">By clicking this button you confirm that you have read and agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy
+                    Policy</a> of the company and confirm that you are of legal age</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.10409ddb498762f2dbf6.min.js"></script></body>
+<script type="text/javascript" src="bundle.c623f203831c7da735ef.min.js"></script></body>
 </html>
