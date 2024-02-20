@@ -93,7 +93,10 @@ $(function () {
 
         setTimeout(function () {
             congratsModal.modal('hide');
-            registrationModal.modal('show');
+            registrationModal.modal({
+                backdrop: 'static',
+                show: true,
+            });
         }, 4000);
     });
 
