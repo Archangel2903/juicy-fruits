@@ -82,7 +82,7 @@
   box-shadow: none !important;
   overflow: hidden;
   outline: none !important;
-  padding: 13px 16px;
+  padding: 13px 10px;
   font-size: 14px;
   font-weight: 700;
   text-align: center;
@@ -100,12 +100,12 @@
   }
 
   &-primary {
-    background: $main-second-color;
+    background: linear-gradient(to right, #fffda0 0%,#ffde54 20%,#fddc6a 40%,#ffa020 60%,#f0c618 80%,#ffde54 100%);
     color: #090341;
 
     &:focus,
     &:hover {
-      background: #f79a00;
+      color: #090341;
       box-shadow: none;
     }
 
@@ -189,53 +189,37 @@
 }
 
 form {
-  &.form {
-    .form {
-      &-label {
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        opacity: .5;
-        color: var(--white);
-        cursor: text;
-        font-size: 16px;
-        line-height: 24px;
-        transition: $transition-base;
-        user-select: none;
+  .form {
+    &-input-button {
+      position: static;
+      top: 0;
+      right: 0;
+      display: block;
+      max-width: 110px;
+      width: 100%;
+      height: 36px;
+      margin: 12px 0 0 auto;
+      background: var(--gold);
+      color: var(--white);
+    }
+
+    &-button-pass {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 48px;
+      height: 100%;
+      padding: 0;
+      background: none;
+      border: none;
+      outline: none !important;
+      box-shadow: none !important;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--white);
         pointer-events: none;
-        z-index: 1;
-      }
-
-      &-input-button {
-        position: static;
-        top: 0;
-        right: 0;
-        display: block;
-        max-width: 110px;
-        width: 100%;
-        height: 36px;
-        margin: 12px 0 0 auto;
-        background: var(--gold);
-        color: var(--white);
-      }
-
-      &-button-pass {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 48px;
-        height: 100%;
-        padding: 0;
-        background: none;
-        border: none;
-        outline: none !important;
-        box-shadow: none !important;
-
-        svg {
-          width: 24px;
-          height: 24px;
-          pointer-events: none;
-        }
       }
     }
   }
@@ -249,17 +233,17 @@ form {
   .form-control {
     height: 42px;
     padding: 16px 10px;
-    background: var(--blue);
-    border: none !important;
-    border-radius: 4px;
+    background: #0A034A;
+    border: 1px solid #251D6D;
+    border-radius: 5px;
+    box-shadow: none !important;
     color: var(--white);
     outline: none !important;
-    box-shadow: inset 0 0 0 1px var(--gold);
     transition: $transition-base;
 
     &:focus {
-      background: var(--blue);
-      box-shadow: inset 0 0 0 2px var(--white);
+      background: #090341 !important;
+      border-color: #8681AE !important;
       color: var(--white);
 
       & ~ .form-label {
@@ -274,7 +258,8 @@ form {
     }
 
     &:not(:placeholder-shown) {
-      background: var(--blue);
+      background: #0A034A;
+      border-color: #251D6D;
       box-shadow: inset 0 0 0 2px var(--white);
 
       & ~ .form-label {
@@ -457,6 +442,8 @@ input {
 .modal {
   &-dialog {
     max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &-content {

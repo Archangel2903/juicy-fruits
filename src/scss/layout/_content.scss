@@ -153,9 +153,24 @@
 
     &-text {
       margin: 0;
+      color: var(--gold);
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
     }
     &-title {
       margin: 0;
+      background: linear-gradient(90.6deg, #f4e575, #c0a150 29.5%, #f4e575 51%, #d49b32 76%, #f4e575);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 40px;
+      font-weight: 900;
+      text-transform: uppercase;
+
+      span {
+        font-size: 28px;
+      }
     }
   }
 
@@ -189,15 +204,14 @@
   }
 
   &__text {
-    margin: auto 0 0;
-    font-size: 11px;
+    margin: 20px 0 0;
+    font-size: 12px;
     font-weight: 500;
     line-height: normal;
     text-align: center;
 
     a {
       color: var(--gold);
-      text-decoration: underline;
     }
   }
 }
