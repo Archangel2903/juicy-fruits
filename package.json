@@ -35,11 +35,9 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
-    "intersection-observer": "^0.7.0",
     "intl-tel-input": "^19.2.19",
     "jquery": "^3.5.1",
     "jquery-ui": "^1.13.2",
-    "parallax-js": "^3.1.0",
     "popper.js": "^1.16.1",
     "svg-spritemap-webpack-plugin": "^3.5.9"
   }

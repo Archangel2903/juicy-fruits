@@ -1,12 +1,9 @@
 import '../scss/main.scss';
-import 'intersection-observer';
 import $ from 'jquery';
 import 'jquery-ui'
 import 'jquery-ui/ui/effect';
-import 'jquery-ui/ui/widgets/tabs';
 import 'bootstrap';
 import 'popper.js';
-import Parallax from "parallax-js";
 import intlTelInput from 'intl-tel-input';
 
 $(window).on('load', function () {
@@ -23,26 +20,6 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    // ParallaxJS
-    if ($('#scene').length) {
-        const scene = document.getElementById('scene');
-        const parallaxInstance = new Parallax(scene);
-    }
-
-    // Tabs
-    if ($('#tabs').length) {
-        $('#tabs').tabs({
-            show: {
-                effect: 'fadeIn',
-                duration: 300,
-            },
-            hide: {
-                effect: 'fadeOut',
-                duration: 300,
-            },
-        });
-    }
-
     // intl-tel-input
     if ($('#phone').length) {
         let input = document.querySelector("#phone");
@@ -67,16 +44,26 @@ $(function () {
     // wheel&modals
     const wheel = $('.wheel-section__wheel-circle img');
     const btnSpin = $('#button');
-    const congratsModal = $('#congrats');
     const registrationModal = $('#registration');
-    const congratsBtn = $('#congrats_button');
+    const txtCounter = $('.wheel-section__attempt-counter');
+    let counter = btnSpin.data('counter');
 
     btnSpin.on('click', function () {
-        if (!wheel.hasClass('step-2')) {
+        if (counter !== 0) {
+            counter--
+        }
+        if (!wheel.hasClass('step-1') && !wheel.hasClass('step-2')) {
             wheel.addClass('step-1');
+            btnSpin.attr('data-counter', counter);
+            txtCounter.attr('data-counter', counter);
+        }
+        else if (wheel.hasClass('step-1')) {
+            wheel.toggleClass('step-1 step-2');
+            btnSpin.attr('data-counter', counter);
+            txtCounter.attr('data-counter', counter);
 
             setTimeout(function () {
-                congratsModal.modal({
+                registrationModal.modal({
                     backdrop: 'static',
                     show: true,
                 });
@@ -85,19 +72,6 @@ $(function () {
         else {
             registrationModal.modal('show');
         }
-    });
-
-    congratsBtn.on('click', function () {
-        congratsModal.modal('hide');
-        wheel.toggleClass('step-1 step-2');
-
-        setTimeout(function () {
-            congratsModal.modal('hide');
-            registrationModal.modal({
-                backdrop: 'static',
-                show: true,
-            });
-        }, 4000);
     });
 
     // Password switch
@@ -117,23 +91,4 @@ $(function () {
             this.innerHTML = '<svg><use xlink:href="img/spritemap.svg#sprite-pass-visible"></use></svg>';
         }
     });
-
-    // Lazy load observer
-    const imagesAll = document.querySelectorAll('img[data-src]');
-    let imgObserve = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.intersectionRatio >= 0 && entry.target.hasAttribute('data-src')) {
-                let current = entry.target;
-                let source = current.getAttribute('data-src');
-
-                current.setAttribute('src', source);
-                current.removeAttribute('data-src');
-            }
-        });
-    });
-    if (imagesAll.length > 0) {
-        imagesAll.forEach(function (image) {
-            imgObserve.observe(image);
-        });
-    }
 });

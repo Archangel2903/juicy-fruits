@@ -1,8 +1,8 @@
 :root {
   --black: #000;
   --white: #fff;
-  --gold: #F5B832;
-  --blue: #050049;
+  --gold: #FFC700;
+  --blue: #0D045D;
   --black-bg: #0c0d12;
   --gray-bg: #18191E;
 }
@@ -25,8 +25,7 @@ $font-family-custom: 'Arial', sans-serif;
 $font-family-unique: 'Times New Roman', serif;
 
 // font-weight
-$font-weight-medium: 500;
-$font-weight-sbold: 600;
+$font-weight-default: 500;
 
 // font-size
 $font-size-default: 16px;
@@ -37,13 +36,23 @@ $transition-base: all .3s ease 0s;
 
 //Bootstrap var
 $enable-shadows: true;
-$grid-gutter-width: 20px;
 $body-color: $text-color;
+$grid-gutter-width: 40px;
 
 $grid-breakpoints: (
         xs: 0,
-        sm: 576px,
+        sm: 640px,
         md: 768px,
-        lg: 992px,
-        xl: 1536px,
+        lg: 1025px,
+        xl: 1540px,
 );
+
+$container-max-widths: ();
+
+$firstIteration: true;
+@each $breakpoint, $value in $grid-breakpoints {
+  @if not $firstIteration {
+    $container-max-widths: map-merge($container-max-widths, ($breakpoint: $value - $grid-gutter-width));
+  }
+  $firstIteration: false;
+}

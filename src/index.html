@@ -9,21 +9,20 @@
 <body>
 <!-- BODY -->
 <div class="main-wrapper">
+    <div class="section-bg">
+        <picture>
+            <source media="(min-width: 1025px)" srcset="<%= require('./img/bg-h.png') %>">
+            <img src="<%= require('./img/bg-v.png') %>" class="section-bg__img" alt="" title="">
+        </picture>
+    </div>
     <!-- HEADER -->
     <header class="header">
         <div class="container-fluid">
-            <div class="header__content">
-                <a href="#" class="header__logo">
-                    <picture>
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/logo.svg') %>" alt="" title="">
-                    </picture>
-                </a>
-
-                <div class="header__title">
-                    <p>Catch <span>Your</span></p>
-                    Mysti Bonus
-                </div>
-            </div>
+            <a href="#" class="logo">
+                <picture>
+                    <img src="<%= require('./img/logo.svg') %>" alt="" title="">
+                </picture>
+            </a>
         </div>
     </header>
     <!-- HEADER END -->
@@ -31,242 +30,98 @@
     <!-- CONTENT -->
     <main class="content">
         <section class="section wheel-section">
-            <div class="section-bg">
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/sparks.png') %>" class="section-bg__img" alt="" title="">
-                </picture>
-            </div>
-
-            <div class="container-md">
-                <div class="wheel-section__content">
-                    <div class="wheel-section__scene">
-                        <div class="wheel-section__scene-parallax">
-                            <div id="scene">
-                                <picture class="parallax-layer" data-depth="0.1">
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/money.png') %>" alt="" title="">
-                                </picture><!--money-->
-
-                                <picture class="parallax-layer" data-depth="0.1">
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/mask.png') %>" alt="" title="">
-                                </picture><!--mask-->
-
-                                <picture class="parallax-layer" data-depth="0.2">
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/dice.png') %>" alt="" title="">
-                                </picture><!--dices-->
-
-                                <picture class="parallax-layer" data-depth="0.3">
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/spades.png') %>" alt="" title="">
-                                </picture><!--spades-->
-
-                                <picture class="parallax-layer" data-depth="0.5">
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/clubs.png') %>" alt="" title="">
-                                </picture><!--clubs-->
-                            </div>
-                        </div>
-
-                        <div class="wheel-section__wheel">
-                            <picture class="wheel-section__wheel-base">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/wheel_base.png') %>" alt="" title="">
-                            </picture>
-                            <picture class="wheel-section__wheel-circle">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/wheel.png') %>" alt="" title="">
-                            </picture>
-                            <picture class="wheel-section__wheel-pointer">
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/wheel_pointer.svg') %>" alt="" title="">
-                            </picture>
-
-                            <div class="wheel-section__wheel-stars">
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/star.png') %>" alt="" title="">
-                                </picture>
-                            </div>
-                        </div>
+            <div class="container-fluid">
+                <p class="wheel-section__title">spin & <span class="wheel-section__title wheel-section__title_colored">win</span></p>
+                <div class="wheel-section__scene">
+                    <div class="wheel-section__wheel">
+                        <picture class="wheel-section__wheel-background">
+                            <img src="<%= require('./img/wheel-bg.png') %>" alt="" title="">
+                        </picture>
+                        <picture class="wheel-section__wheel-circle">
+                            <img src="<%= require('./img/wheel.png') %>" alt="" title="">
+                        </picture>
+                        <picture class="wheel-section__wheel-badge">
+                            <img src="<%= require('./img/wheel-badge.png') %>" alt="" title="">
+                        </picture>
+                        <picture class="wheel-section__wheel-pointer">
+                            <img src="<%= require('./img/wheel_pointer.svg') %>" alt="" title="">
+                        </picture>
                     </div>
+                </div>
 
-                    <div class="wheel-section__footer">
-                        <p class="wheel-section__title">
-                            <span>Win<svg><use xlink:href="img/spritemap.svg#sprite-crown"></use></svg></span>Right Now!
-                        </p>
+                <div class="wheel-section__footer">
+                    <p class="wheel-section__attempt">You've got <span class="wheel-section__attempt-counter" data-counter="2"></span> tries</p>
 
-                        <button id="button" class="wheel-section__button btn-style"><span>spin</span></button>
-
-                        <p class="wheel-section__attempt" data-count="2">Attempts<br>Left</p>
-                    </div>
+                    <button id="button" class="btn-style" data-counter="2" data-toggle="modal" data-target="#registration"><span>spin now</span></button>
                 </div>
             </div>
         </section>
     </main>
     <!-- CONTENT END -->
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__payments">
-                    <picture>
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/visa.svg') %>" alt="" title="">
-                    </picture>
-
-                    <picture>
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/mastercard.svg') %>" alt="" title="">
-                    </picture>
-
-                    <picture>
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/google-pay.svg') %>" alt="" title="">
-                    </picture>
-
-                    <picture>
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/apple-pay.svg') %>" alt="" title="">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- FOOTER END -->
-</div>
-
-<!-- Congratulation -->
-<div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="congratsLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="congrats">
-                <picture class="congrats__pic">
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/box.png') %>" alt="" title="">
-                </picture>
-
-                <p class="congrats__title">
-                    Congrats!
-                    <span>You won</span>
-                </p>
-
-                <div class="congrats__prize">
-                    <p class="congrats__prize-text">150 <span><span>free</span><span>spins</span></span></p>
-                </div>
-
-                <button id="congrats_button" class="congrats__button btn-style"><span>Claim</span></button>
-            </div>
-        </div>
-    </div>
 </div>
 
 <!-- Registration -->
 <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="registrationLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-        <div class="modal-content reg-content">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
             <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>-->
 
-            <div class="congrats">
-                <picture class="congrats__pic">
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/box.png') %>" alt="" title="">
+            <div class="registration">
+                <picture class="registration__decor">
+                    <img src="<%= require('./img/modal-decor.png') %>" alt="" title="">
                 </picture>
 
-                <p class="congrats__title">
-                    Congrats!
-                    <span>You won</span>
-                </p>
-
-                <div class="congrats__prize">
-                    <p class="congrats__prize-text">1500 <span>$</span></p>
-                    <span>+</span>
-                    <p class="congrats__prize-text">150 <span><span>free</span><span>spins</span></span></p>
+                <div class="registration__offer">
+                    <p class="registration__offer-text">Congrats!</p>
+                    <p class="registration__offer-text">You won Welcome Bonus</p>
+                    <p class="registration__offer-title">1500 <span>$ +</span> 150 <span>fs</span></p>
                 </div>
-            </div>
 
-            <div class="registration">
-                <p class="registration__title">Registration & Claim Your Bonus</p>
+                <form method="post" action="" class="registration__form">
+                    <p class="registration__title">Registration</p>
 
-                <div id="tabs">
-                    <ul>
-                        <li><a href="#tabs-1">Phone</a></li>
-                        <li><a href="#tabs-2">Email</a></li>
-                    </ul>
-
-                    <div id="tabs-1">
-                        <form action="" method="POST" class="form form-phone">
+                    <div class="form-row">
+                        <div class="col-sm-6">
                             <label class="form-group">
-                                <input type="tel" id="phone" class="form-control" placeholder=" ">
-                                <input type="button" class="form-input-button" value="send sms">
+                                <input type="text" class="form-control" placeholder="First name">
                             </label>
-
+                        </div>
+                        <div class="col-sm-6">
                             <label class="form-group">
-                                <input type="number" class="form-control" placeholder=" ">
-                                <span class="form-label">Confirmation code</span>
-                                <input type="button" class="form-input-button" value="confirm">
+                                <input type="text" class="form-control" placeholder="Last name">
                             </label>
-
-                            <button type="submit" class="btn btn-primary">Register & Claim</button>
-                        </form>
+                        </div>
                     </div>
 
-                    <div id="tabs-2">
-                        <form action="" method="POST" class="form form-email">
-                            <div class="row">
-                                <div class="col-lg-6 m-lg-0 mb-4">
-                                    <fieldset>
-                                        <label class="form-group">
-                                            <input type="email" class="form-control" placeholder=" ">
-                                            <span class="form-label">Email</span>
-                                        </label>
-
-                                        <label class="form-group">
-                                            <input type="text" class="form-control" placeholder=" ">
-                                            <span class="form-label">First name</span>
-                                        </label>
-
-                                        <label class="form-group">
-                                            <input type="text" class="form-control" placeholder=" ">
-                                            <span class="form-label">Surname</span>
-                                        </label>
-                                    </fieldset>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <fieldset>
-                                        <label class="form-group">
-                                            <button type="button" class="form-button-pass">
-                                                <svg><use xlink:href="img/spritemap.svg#sprite-pass-visible"></use></svg>
-                                            </button>
-                                            <input type="password" class="form-control" placeholder=" ">
-                                            <span class="form-label">Password</span>
-                                        </label>
-                                        <label class="form-group">
-                                            <input type="password" class="form-control" placeholder=" ">
-                                            <span class="form-label">Re-enter your password</span>
-                                        </label>
-                                    </fieldset>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Register & Claim</button>
-
-                            <!--<button type="submit" class="form-submit btn-style"><span>Register & Claim</span></button>-->
-                        </form>
+                    <div class="form-row">
+                        <div class="col-12">
+                            <label class="form-group">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </label>
+                        </div>
                     </div>
-                </div>
+
+                    <p class="registration__form-separate">or</p>
+
+                    <div class="form-row">
+                        <div class="col-12">
+                            <label class="form-group">
+                                <input type="tel" class="form-control" placeholder="Phone">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <label class="form-group">
+                                <input type="password" class="form-control" placeholder="Password">
+                            </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-primary w-100">Register & Get Bonus</button>
+                        </div>
+                    </div>
+                </form>
 
                 <p class="registration__text">By clicking this button you confirm that you have read and agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy
                     Policy</a> of the company and confirm that you are of legal age</p>

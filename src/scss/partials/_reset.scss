@@ -19,7 +19,8 @@ html, body {
   text-size-adjust: none;
   font-family: $font-family-base;
   font-size: $font-size-default;
-  background: #0C0D12;
+  font-weight: $font-weight-default;
+  background: none;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
@@ -168,13 +169,13 @@ input {
 
   &::-moz-placeholder {
     font-weight: $font-weight-light;
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: $input-placeholder-color;
     transition: $transition-base;
   }
   &::-ms-placeholder {
     font-weight: $font-weight-light;
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: $input-placeholder-color;
     transition: $transition-base;
   }

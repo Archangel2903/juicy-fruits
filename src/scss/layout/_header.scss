@@ -4,49 +4,21 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position: absolute;
+  position: relative;
   min-width: 320px;
   width: 100%;
+  padding: 12px 0;
   z-index: 100;
+
+  .container-fluid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
 
-.header {
-  padding: 16px 0;
-
-  &__content {
-    position: relative;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    gap: 16px;
-  }
-  &__logo {
-
-  }
-  &__title {
-    display: inline-flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: stretch;
-    margin: 0;
-    color: var(--white);
-    font-size: 24px;
-    font-weight: 900;
-    line-height: normal;
-    text-transform: uppercase;
-
-    p {
-      margin: 0;
-      color: $main-second-color;
-      font-size: 18px;
-      font-weight: 900;
-
-      span {
-        color: #fcf072;
-        font-weight: 500;
-      }
-    }
+.logo {
+  img {
+    width: 96px;
   }
 }
